@@ -1,0 +1,166 @@
+.body .createBlog {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #1E293B;
+    border-radius: .3vh;
+}
+.body .createBlog input, textarea {
+    height: 3.6%;
+    font-size: 2vh;
+    text-align: center;
+    width: 50%;
+    background-color: #1E293B;
+    border-radius: .3vh;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    margin-top: .5%;
+    margin-bottom: .5%;
+}
+.body .createBlog input[name="create"] {
+    width: 20%;
+    height: 3%;
+    font-size: 2vh;
+    text-align: center;
+    background-color: #1E293B;
+    border-radius: .3vh;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.body .createBlog input[name="settings"] {
+    width: 20%;
+    height: 3%;
+    font-size: 2vh;
+    text-align: center;
+    background-color: #1E293B;
+    border-radius: .3vh;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.body .createBlog input[name="create"]:hover {
+    background-color: #1E293B;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.body .createBlog input[name="settings"]:hover {
+    background-color: #1E293B;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}   
+.body .createBlog textarea {
+    height: 10%;
+    font-size: 2vh;
+    text-align: center;
+    width: 50%;
+    background-color: #1E293B;
+    border-radius: .3vh;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    resize: vertical;
+}
+.body .pastes { 
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+}
+.body .pastes tr:nth-child(2n) {
+    background-color: #0F172A;
+}
+
+.body .pastes th, .body .pastes td {
+    font-size: 1.6vh;
+    color: #fff;
+    padding: 1vh 1vw;
+}
+
+.body .pastes .action {
+    padding: 1vh 0vw;
+}
+
+.body .pastes th {
+    text-align: left;
+    border-bottom: .2vh solid rgba(255, 255, 255, .25);
+    font-size: 1.8vh;
+    font-weight: 600;
+}
+
+.body .pastes td a {
+    color: var(--main-color);
+}
+
+.body .pastes td form {
+    margin: 0;
+    padding: 0;
+}
+
+.body .pastes td form a {
+    font-size: 2.1vh;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px), (orientation : portrait) {
+    .body .createBlog {
+        width: 90%;
+        height: auto;
+        margin-top: 3%;
+    }
+    .body .createBlog input, textarea {
+        height: 3%;
+        font-size: 2vh;
+        text-align: center;
+        width: 60%;
+        background-color: #1E293B;
+        border-radius: .3vh;
+        border: none;
+        color: white;
+        border: 1px solid white;
+        margin-top: .5%;
+        margin-bottom: .5%;
+    }
+    .body .createBlog input[name="create"] {
+        width: 30%;
+        height: 3%;
+        font-size: 2vh;
+        text-align: center;
+        background-color: #1E293B;
+        border-radius: .3vh;
+        border: none;
+        color: white;
+        border: 1px solid white;
+        cursor: pointer;
+        margin-top: 3%;
+    }
+    .body .createBlog textarea {
+        height: 10%;
+        font-size: 2vh;
+        text-align: center;
+        width: 60%;
+        background-color: #1E293B;
+        border-radius: .3vh;
+        border: none;
+        color: white;
+        border: 1px solid white;
+        margin-top: .5%;
+        margin-bottom: .5%;
+    }
+    .body .pastes { 
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+    }
+}

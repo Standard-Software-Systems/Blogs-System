@@ -12,7 +12,7 @@ button, textarea, input, select {
     display: flex;
     width: 65%;
     padding: 2vh 17.5%;
-    background-color: #1E293B;
+    background-color: var(--main-color);
     align-items: center;
 }
 
@@ -106,6 +106,9 @@ button, textarea, input, select {
     padding: 10px;
     background-color: #1E293B;
     border-radius: .3vh;
+    word-break: break-all;
+    word-wrap: break-word;
+
 }
 .body .noBlogs {
     margin: auto;
@@ -129,14 +132,70 @@ button, textarea, input, select {
     font-size: 1.5vh;
     font-weight: 400;
     display: inline-block;
-    margin-top: 10vh;
     margin-right: 1%;
 }
 .body .Blogs .date {
     font-size: 1.5vh;
-    margin-top: 10vh;
     font-weight: 400;
     display: inline-block;
+}
+.body .Blogs .thumb {
+    cursor: pointer;
+    font-size: 2vh;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+}
+.body .Blogs .heart {
+    cursor: pointer;
+    font-size: 2vh;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+}
+.body .Blogs .thumb button {
+    cursor: pointer;
+    font-size: 1.5vh;
+    color: white;
+    background: none;
+    border: none;
+    display: inline-block;
+}
+.body .Blogs .heart button {
+    cursor: pointer;
+    font-size: 1.5vh;
+    color: white;
+    background: none;
+    border: none;
+    display: inline-block;
+}
+.body .Blogs .more {
+    font-size: 1.5vh;
+    font-weight: 400;
+    margin-top: 6.5vh;
+    margin-right: 1%;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.body .Blogs .more i {
+    color: var(--main-color);
+    transition: color 1s ease;
+    text-decoration: none;
+}
+.body .Blogs .more:hover i{
+    color: #0746ab;
+    text-decoration: none;
+}
+.body .Blogs .more a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 1s ease;
+}
+.body .Blogs .more a:hover {
+    color: #0746ab;
+    text-decoration: none;
 }
 .body .Blogs .image {
     width: 20%;
@@ -145,11 +204,15 @@ button, textarea, input, select {
     margin-top: 2%;
 
 }
-
+.body .Blogs .content {
+    font-size: 1.8vh;
+    font-weight: 400;
+}
 @media screen and (max-width: 600px), (orientation : portrait) {
     .body .Blogs {
         width: 90%;
-        height: auto;
+        max-height: 40%;
+        overflow-y: auto;
         margin-top: 3%;
     }
     .body .noBlogs {
@@ -165,6 +228,7 @@ button, textarea, input, select {
         background-color: #1E293B;
         border-radius: .3vh;
     }
+
     .body .Blogs .con {
         width: 50%;
         height: auto;
@@ -181,26 +245,209 @@ button, textarea, input, select {
     .body .Blogs .title {
         font-size: 3vh;
         font-weight: 500;
-        text-align: center;
+        margin-left: 4%;
+    }
+    .body .Blogs .more {
+        font-size: 1.5vh;
+        font-weight: 400;
+        margin-top: 1.1vh;
+        margin-left: 2%;
     }
     .body .Blogs .author {
         font-size: 1.5vh;
         font-weight: 400;
         display: inline-block;
-        margin-top: 10%;
         margin-right: 1%;
         margin-left: 2%;
     }
     .body .Blogs .content {
-        text-align: center;
+        font-size: 1.4vh;
+        margin-top: 3%;
+        margin-left: 5%;
+        font-weight: 500;
     }
     .body .Blogs .date {
         font-size: 1.5vh;
-        margin-top: 10%;
         font-weight: 400;
         display: inline-block;
+    }
+    .body .Blogs .thumb button {
+        margin-top: -1vh;
+    }
+    .body .Blogs .heart button {
+        margin-top: -1vh;
     }
 }
 .hidden {
     display: none;
+}
+.body .b {
+    margin: auto;
+    width: 40%;
+    height:fit-content;
+    color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #1E293B;
+    border-radius: .3vh;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.body .noBlogs {
+    margin: auto;
+    width: 40%;
+    height: 20%;
+    color: white;
+    font-size: 5vh;
+    font-weight: 500;
+    margin-top: 3%;
+    text-align: center;
+    padding: 10px;
+    background-color: #1E293B;
+    border-radius: .3vh;
+}
+.body .b .title {
+    font-size: 3vh;
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+.body .b .author {
+    font-size: 1.5vh;
+    font-weight: 400;
+    margin-top: 10vh;
+    display: inline-block;
+    margin-right: 1%;
+}
+.body .b .date {
+    font-size: 1.5vh;
+    font-weight: 400;
+    display: inline-block;
+}
+.body .b .more {
+    font-size: 1.5vh;
+    font-weight: 400;
+    margin-top: 8vh;
+    margin-right: 1%;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.body .b .more i {
+    color: var(--main-color);
+    transition: color 1s ease;
+    text-decoration: none;
+}
+.body .b .more:hover i{
+    color: #0746ab;
+    text-decoration: none;
+}
+.body .b .more a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 1s ease;
+}
+.body .b .more a:hover {
+    color: #0746ab;
+    text-decoration: none;
+}
+.body .b .image {
+    width: 20%;
+    height: 80%;
+    float: right;
+    margin-top: 2%;
+
+}
+.body .b .thumb {
+    font-size: 2vh;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+}
+.body .b .heart {
+    font-size: 2vh;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+}   
+.body .b .thumb button {
+    font-size: 1.5vh;
+    color: white;
+    background: none;
+    border: none;
+    display: inline-block;
+}
+.body .b .heart button {
+    font-size: 1.5vh;
+    color: white;
+    background: none !important;
+    border: none !important;
+    display: inline-block;
+}
+@media screen and (max-width: 600px), (orientation : portrait) {
+    .body .b {
+        width: 90%;
+        max-height: 40%;
+        overflow-y: auto;
+        margin-top: 3%;
+    }
+    .body .noBlogs {
+        margin: auto;
+        width: 40%;
+        height: 20%;
+        color: white;
+        font-size: 3vh;
+        font-weight: 500;
+        margin-top: 10%;
+        text-align: center;
+        padding: 10px;
+        background-color: #1E293B;
+        border-radius: .3vh;
+    }
+
+    .body .b .con {
+        width: 50%;
+        height: auto;
+        float: left;
+        text-align:left !important;
+    }
+    .body .b .image {
+        width: 40%;
+        height: 40%;
+        height: auto;
+        float: right;
+        margin-top: 0%;
+    }
+    .body .b .title {
+        font-size: 3vh;
+        font-weight: 500;
+        margin-left: 4%;
+        border-bottom: 1px solid #eee;
+    }
+    .body .b .more {
+        font-size: 1.5vh;
+        font-weight: 400;
+        margin-top: 8vh;
+        margin-left: 2%;
+    }
+    .body .b .author {
+        font-size: 1.5vh;
+        font-weight: 400;
+        display: inline-block;
+        margin-right: 1%;
+        margin-left: 2%;
+    }
+    .body .b .content {
+        font-size: 1.9vh;
+        margin-top: 5%;
+        margin-left: 5%;
+        font-weight: 400;
+    }
+    .body .b .date {
+        font-size: 1.5vh;
+        font-weight: 400;
+        display: inline-block;
+    }
 }

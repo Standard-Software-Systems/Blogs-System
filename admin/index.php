@@ -45,8 +45,8 @@
 	<script src="https://kit.fontawesome.com/<?php echo $site['fontAwesomeKit'] ?>.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
-    <link href="../css/main.css?rnd=2" rel="stylesheet">
-    <link href="../css/admin.css?rnd=2" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
 	<meta name="theme-color" content="#<?php echo $siteInfo['siteTheme'] ?>">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:creator" content="@xolifydev">
@@ -56,10 +56,16 @@
 	<meta property="og:image" content="<?php echo $siteInfo['siteLogo'] ?>">
     <style>
         :root {
-            --main-color: #<?php echo $site['color'] ?>
+            --main-color: <?php echo $siteInfo['siteTheme'] ?>
         }
         .updateBtn:hover {
             cursor: pointer;
+        }
+        @media screen and (max-width: 600px), (orientation : portrait) {
+            .updateBtn {
+                margin-top: 2% !important;
+                width: 35% !important;
+            }
         }
     </style>
 </head>
@@ -109,7 +115,7 @@
                 <br>
                 <label for="">Site Logo</label>
                 <br>
-                <textarea name="siteLogo" placeholder="Site logo" required><?php echo $siteInfo['siteLogo'] ?></textarea>
+                <input type="url" name="siteLogo" placeholder="Site Logo" value="<?php echo $siteInfo['siteLogo'] ?>" required>
                 <br>
                 <label for="">Site Desc</label>
                 <br>
@@ -162,7 +168,7 @@
                 <td><?php echo $paste['title'] ?></td>
                 <td><?php echo $paste['date'] ?></td>
                 <td><?php echo $paste['author'] ?></td>
-                <td><a href="<?php echo $paste['image'] ?>">Click Here</a></td>
+                <td><a href="<?php echo $paste['image'] ?>" target="_blank">Click Here</a></td>
                 <td class="action">
                     <form method="POST" action="../backend/removeBlog.php" class="removeForm">
                         <input type="hidden" name="removeBlog" value="<?php echo $paste['id'] ?>">

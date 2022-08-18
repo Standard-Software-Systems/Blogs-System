@@ -34,6 +34,10 @@
 			echo $js_code;
 	}
 	// Create random string
+	function some_function($string){
+		$done = substr($string,0,100);
+		return $done;
+   	}
     function generateRandomString($length) {
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);

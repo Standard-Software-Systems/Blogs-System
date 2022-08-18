@@ -29,6 +29,13 @@ CREATE TABLE siteSettings (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `heartslikes` (
+	`userid` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`which` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`blogId` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 INSERT INTO siteSettings (siteName, siteDescription, siteLogo, siteTheme) VALUES ('Blog Site', 'A blog site that allows you to share your thoughts with the world.', 'https://pastenow.xyz/images/standard_logo.png', '#2d7cb5');
 
 ALTER TABLE `users`

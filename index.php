@@ -113,29 +113,33 @@
                 <div class="Blogs">
                     <img src="<?php echo $blog['image'] ?>" alt="" class="image">
                     <div class="con">
-                        
                         <div class="header">
                             <div class="title">
                             <?php echo $blog['title'] ?>
                         </div>
                     </div>
+
                     <div class="content">
                         <?php echo $string ?>
                     </div>
+                    
                     <div class="more">
                         <a href="blogs/index.php?blog=<?php echo $blog['id'] ?>">
                             <i class="fa-solid fa-arrow-right"></i>
                             Read More
                         </a>
-                    </div>
+                    </div>  
+                    
                     <div class="author">
                         <i class="fa-solid fa-user"></i>
                         <?php echo $blog['author'] ?>
                     </div>
+                    
                     <div class="date">
                         <i class="fa-solid fa-calendar"></i>
                         <?php echo $blog['date'] ?>
                     </div>
+                    
                     <div class="thumb" style="margin-left:.5%;">
                     <form method="POST">
                     <input type="hidden" name="blogId" value="<?php echo $blog['id'] ?>">
@@ -145,6 +149,7 @@
                         </button>
                     </form>
                     </div>
+                    
                     <div class="heart" style="margin-left:.5%;">
                     <form method="POST">
                     <input type="hidden" name="blogId" value="<?php echo $blog['id'] ?>">
@@ -154,6 +159,8 @@
                         </button>
                     </form>
                     </div>
+                
+                </div>
                 </div>
             <?php 
                 }
